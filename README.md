@@ -4,7 +4,7 @@
 
 ### Exercise 1
 
-1. Create a project folder & initialize git
+
 
 ```bash
 
@@ -115,4 +115,137 @@ $
 
 
 ```
+### Exercise 2
 
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash -m "Add home file"
+Saved working directory and index state On dev: Add home file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash list
+stash@{0}: On dev: Add home file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash -m "Add about file"
+Saved working directory and index state On dev: Add about file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash list
+stash@{0}: On dev: Add about file
+stash@{1}: On dev: Add home file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash -m "Add team file"
+Saved working directory and index state On dev: Add team file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash list
+stash@{0}: On dev: Add team file
+stash@{1}: On dev: Add about file
+stash@{2}: On dev: Add home file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (df8548843faa95b5bae974e24621a87175ac0a07)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash list
+stash@{0}: On dev: Add team file
+stash@{1}: On dev: Add home file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (3080d4177c3f6bab9d2a5a0ec98763376c89fa51)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git commit -m "Create two file home, about"
+[dev 8289cd2] Create two file home, about
+ 2 files changed, 24 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git push origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 519 bytes | 519.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Ange290/Exercise1.git
+   6f3519e..8289cd2  dev -> dev
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash list
+stash@{0}: On dev: Add team file
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git stash pop stash@{0}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (f37d6b88d24b983bce1facbfa6bdf7886e2972f7)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git reset --hard
+HEAD is now at 8289cd2 Create two file home, about
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$
+
+```
