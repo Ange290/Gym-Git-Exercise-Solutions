@@ -249,3 +249,61 @@ User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
 $
 
 ```
+
+## Bundle 2
+
+### Exercise 1
+
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git branch
+* dev
+  main
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/bundle-2)
+$ git branch
+  dev
+* ft/bundle-2
+  main
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/bundle-2)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/bundle-2)
+$ git commit -m "Create service file"
+[ft/bundle-2 d0a5d1d] Create service file
+ 1 file changed, 11 insertions(+)
+ create mode 100644 service.html
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 440.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Ange290/Exercise1/pull/new/ft/bundle-2
+remote:
+To https://github.com/Ange290/Exercise1.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/bundle-2)
+$
+```
