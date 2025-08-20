@@ -307,3 +307,45 @@ To https://github.com/Ange290/Exercise1.git
 User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/bundle-2)
 $
 ```
+### Exercise 2
+
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
+$ git commit -m "resolve conflicts"
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 406 bytes | 406.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ange290/Exercise1.git
+   0a359ba..89dc05a  ft/service-redesign -> ft/service-redesign
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
+$
+
+```
