@@ -597,3 +597,60 @@ bade97d Revert "Creating team page"
 fb87349 Revert "Reapply "Create fag file and add  changes""
 
 ```
+### Exercise 2
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git commit -m"Make changes"
+[main 6a7a64e] Make changes
+ 1 file changed, 1 insertion(+)
+ User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git push origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 852 bytes | 213.00 KiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+To https://github.com/Ange290/Exercise1.git
+   8f094ee..bac4112  main -> main
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
+$ git commit -m"Make changes on home page"
+[ft/home-page-redesign 1d5bb28] Make changes on home page
+ 1 file changed, 5 insertions(+)
+ 
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 788 bytes | 394.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/Ange290/Exercise1.git
+   486ad1e..cabe33e  ft/home-page-redesign -> ft/home-page-redesign
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
+$
+
+```
