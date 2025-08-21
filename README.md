@@ -349,3 +349,251 @@ User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
 $
 
 ```
+
+## Bundle 3
+### Exercise 2
+
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/team-page)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/team-page)
+$ git commit -m "Creating team page"
+[ft/team-page 1aa03ee] Creating team page
+ 1 file changed, 18 insertions(+)
+ create mode 100644 team.html
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 506 bytes | 506.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Ange290/Exercise1/pull/new/ft/team-page
+remote:
+To https://github.com/Ange290/Exercise1.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/team-page)
+$ git log
+commit 1aa03ee7314733fa106b2bf1c2bb984d810260d1 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Ange290 <uange209@gmail.com>
+Date:   Wed Aug 20 11:30:39 2025 +0200
+
+    Creating team page
+
+commit 89dc05a6a2a4334a68b564311b32f7fe344aea00 (origin/ft/service-redesign, ft/service-redesign)
+Merge: 0a359ba 950314d
+Author: Ange290 <uange209@gmail.com>
+Date:   Wed Aug 20 11:01:59 2025 +0200
+:
+commit 1aa03ee7314733fa106b2bf1c2bb984d810260d1 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Ange290 <uange209@gmail.com>
+Date:   Wed Aug 20 11:30:39 2025 +0200
+
+    Creating team page
+
+commit 89dc05a6a2a4334a68b564311b32f7fe344aea00 (origin/ft/service-redesign, ft/service-redesign)
+Merge: 0a359ba 950314d
+Author: Ange290 <uange209@gmail.com>
+Date:   Wed Aug 20 11:01:59 2025 +0200
+
+:
+Author: Ange290 <uange209@gmail.com>
+Date:   Wed Aug 20 11:30:39 2025 +0200
+
+    Creating team page
+
+commit 89dc05a6a2a4334a68b564311b32f7fe344aea00 (origin/ft/service-redesign, ft/service-redesign)
+Merge: 0a359ba 950314d
+Author: Ange290 <uange209@gmail.com>
+Date:   Wed Aug 20 11:01:59 2025 +0200
+
+    Merge branch 'main' into ft/service-redesign
+
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/contact-page)
+$ git cherry-pick 1aa03ee7314733fa106b2bf1c2bb984d810260d1
+[ft/contact-page 1018857] Creating team page
+ Date: Wed Aug 20 11:30:39 2025 +0200
+ 1 file changed, 18 insertions(+)
+ create mode 100644 team.html 
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/contact-page)    
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/contact-page)    
+$ git commit -m "Add changes in contact file"
+[ft/contact-page 248ca75] Add changes in contact file
+ 1 file changed, 1 insertion(+)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/contact-page)    
+$ git push origin ft/contact-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)        
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects 
+To https://github.com/Ange290/Exercise1.git
+   0561152..248ca75  ft/contact-page -> ft/contact-page
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/faq-page)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/faq-page)
+$ git commit -m "add faq file"
+[ft/faq-page 23d7162] add faq file
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads    
+Compressing objects: 100% (3/3), done.      
+Writing objects: 100% (3/3), 419 bytes | 419.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ange290/Exercise1.git 
+   201edae..23d7162  ft/faq-page -> ft/faq-page
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/faq-page)
+$ git status
+23d7162 (HEAD -> ft/faq-page, origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/ft/faq-page
+:
+23d7162 (HEAD -> ft/faq-page, origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file       
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/ft/faq-page
+ef74ef5 Add changes
+bade97d Revert "Creating team page"       
+23d7162 (HEAD -> ft/faq-page, origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/ft/faq-page
+:
+23d7162 (HEAD -> ft/faq-page, origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file       
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/ft/faq-page
+ef74ef5 Add changes
+bade97d Revert "Creating team page"       
+201edae Create fag file and add  changes  
+fb87349 Revert "Reapply "Create fag file and add  changes""
+b4ab691 Reapply "Create fag file and add  changes"
+:
+23d7162 (HEAD -> ft/faq-page, origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/ft/faq-page
+:
+23d7162 (HEAD -> ft/faq-page, origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/ft/faq-page
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/faq-page)
+$ git revert 82afcd1
+hint: Waiting for your editor to close the file...
+[ft/faq-page 486ad1e] Revert "Reapply "Creating team page""
+ 1 file changed, 18 deletions(-)
+486ad1e (HEAD -> ft/faq-page) Revert "Reapply "Creating team page""
+23d7162 (origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/f:
+486ad1e (HEAD -> ft/faq-page) Revert "Reapply "Creating team page""
+23d7162 (origin/ft/faq-page) add faq file
+0751d0a (origin/ft/contact-page, ft/contact-page) add
+6f9bed6 add
+f3f012c Add changes
+1a1a09d (main) merge
+248ca75 Add changes in contact file
+b4e4456 Delete files
+4ac31eb Merge pull request #6 from Ange290/ft/team-page
+82afcd1 (origin/ft/team-page, ft/team-page) Reapply "Creating team page"
+224cf70 Merge pull request #5 from Ange290/ft/faq-page
+ef74ef5 Add changes
+bade97d Revert "Creating team page"
+201edae Create fag file and add  changes
+fb87349 Revert "Reapply "Create fag file and add  changes""
+
+```
