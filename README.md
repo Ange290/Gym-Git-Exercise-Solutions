@@ -351,7 +351,7 @@ $
 ```
 
 ## Bundle 3
-### Exercise 2
+### Exercise 1
 
 ```bash
 User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/service-redesign)
