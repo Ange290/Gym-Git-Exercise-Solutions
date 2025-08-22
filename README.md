@@ -654,3 +654,68 @@ User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
 $
 
 ```
+## Bundle 4
+
+### Exercise 1
+
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git remote
+origin
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git remote add git-copy https://github.com/Ange290/Exercise2.git
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git remote
+git-copy
+origin
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git commit -m"add change on homepage"
+[main f95d382] add change on homepage
+ 1 file changed, 1 insertion(+)
+ User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ange290/Exercise1.git
+   9c3e311..f95d382  main -> main
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git push git-copy main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ange290/Exercise2.git
+   8c9cb91..986bc59  main -> main
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$   
+
+```
