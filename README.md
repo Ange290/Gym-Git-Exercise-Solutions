@@ -719,3 +719,86 @@ User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
 $   
 
 ```
+
+### Exercise 2
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/footer)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/footer)
+$ git commit -m"Add footer on home page"
+[ft/footer b53c6e4] Add footer on home page
+ 1 file changed, 3 insertions(+)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/footer)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/footer)
+$ git commit -m "Add new changes on home page"
+[ft/footer 64d9507] Add new changes on home page
+ 1 file changed, 1 insertion(+)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/footer)
+$ git  push origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 615 bytes | 307.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)        
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects 
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting: 
+remote:      https://github.com/Ange290/Exercise1/pull/new/ft/footer 
+remote:
+To https://github.com/Ange290/Exercise1.git
+ * [new branch]      ft/footer -> ft/footer
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'git-copy/main'.
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/squashing)       
+$ git merge squash ft/footer
+merge: squash - not something we can merge
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/squashing)       
+$ git merge --squash ft/footer
+Updating 986bc59..64d9507
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/squashing)       
+$ git commit -m"footer changes squashing"
+[ft/squashing cfbc1d6] footer changes squashing
+ 1 file changed, 4 insertions(+)
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/squashing)       
+$ git push origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 372 bytes | 372.00 KiB/s, done.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Ange290/Exercise1/pull/new/ft/squashing
+remote:
+To https://github.com/Ange290/Exercise1.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/squashing)
+$
+
+```
