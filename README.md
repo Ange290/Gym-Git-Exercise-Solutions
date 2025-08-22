@@ -802,3 +802,53 @@ User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/squashing)
 $
 
 ```
+
+## Bundle 5
+
+### Exercise 1
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (ft/squashing)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'git-copy/main'.
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git add .
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'git-copy/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    home.html -> index.html   
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 237 bytes | 237.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ange290/Exercise2.git
+   986bc59..8c1bad5  main -> main
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 510 bytes | 510.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Ange290/Exercise1.git
+   e0d6f03..98d35d1  main -> main
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/Exercise1 (main)
+$
+```
