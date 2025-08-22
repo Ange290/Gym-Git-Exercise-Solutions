@@ -895,3 +895,44 @@ To https://github.com/Ange290/git-cafe-exercise.git
 User@ANGE-LAPTOP2 MINGW64 ~/Documents/git-cafe-exercise (main)
 $
 ```
+
+## Bundle 6
+
+### Exercise 1
+
+```bash
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git checkout -b ft/bundle6-exercise1
+Switched to a new branch 'ft/bundle6-exercise1'
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/git-cafe-exercise (ft/bundle6-exercise1)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/git-cafe-exercise (ft/bundle6-exercise1)
+$ git add .
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/git-cafe-exercise (ft/bundle6-exercise1)
+$ git commit -m"Create and add change in menu page"
+[ft/bundle6-exercise1 4008538] Create and add change in menu page
+ 1 file changed, 18 insertions(+)
+ create mode 100644 menu.html
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/git-cafe-exercise (ft/bundle6-exercise1)
+$ git push origin ft/bundle6-exercise1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 506 bytes | 506.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle6-exercise1' on GitHub by visiting:
+remote:      https://github.com/Ange290/git-cafe-exercise/pull/new/ft/bundle6-exercise1     
+remote:
+To https://github.com/Ange290/git-cafe-exercise.git
+ * [new branch]      ft/bundle6-exercise1 -> ft/bundle6-exercise1
+
+User@ANGE-LAPTOP2 MINGW64 ~/Documents/git-cafe-exercise (ft/bundle6-exercise1)
+$
+```
